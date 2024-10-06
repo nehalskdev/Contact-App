@@ -53,11 +53,7 @@ h3 {
   background-color: rgb(239, 193, 133);
   color: white;
 }
-img {
-  width: 50%;
-}
 /* Basic styles for the modal */
-
 .modal {
   display: none;
   position: fixed;
@@ -67,10 +63,8 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
+
 
 .modal-content {
   background-color: #fff;
