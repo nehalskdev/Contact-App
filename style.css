@@ -1,20 +1,47 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: radial-gradient(
+        circle,
+        transparent 20%,
+        #ccedf7 20%,
+        #ccedf7 80%,
+        transparent 80%,
+        transparent
+      )
+      0% 0% / 20px 20px,
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #ccedf7 20%,
+        #ccedf7 80%,
+        transparent 80%,
+        transparent
+      )
+      10px 10px / 20px 20px,
+    linear-gradient(#b1b1ff 2px, transparent 2px) 0px -1px / 10px 10px,
+    linear-gradient(90deg, #b1b1ff 2px, #ccedf7 2px) -1px 0px / 10px 10px #ccedf7;
+  background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+  background-color: #ccedf7;
 }
 header {
-    height: 4rem;
-    background-color: aqua;
-    display: flex;
+  height: 4rem;
+  background-color: aqua;
+  display: flex;
 }
 .title {
-    padding: 1rem;
+  padding: 1rem;
 }
 .add-btn {
-    height: 2rem;
-    width: 2rem;
-    position: absolute;
-    right: 0;
-    margin: 1rem;
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  right: 0;
+  margin: 1rem;
+}
+img {
+  width: 50%;
 }
