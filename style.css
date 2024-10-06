@@ -35,7 +35,7 @@ header {
   align-items: center;
 }
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 .title {
   padding: 1rem;
@@ -45,6 +45,7 @@ h3 {
   width: 3rem;
   position: absolute;
   right: 0;
+  font-size: 1rem;
   margin: 1rem;
   color: black;
   border-radius: 10px;
