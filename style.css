@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  height: 100vh;
   background: radial-gradient(
         circle,
         transparent 20%,
@@ -31,6 +32,10 @@ header {
   height: 4rem;
   background-color: aqua;
   display: flex;
+  align-items: center;
+}
+h2 {
+  font-size: 1.8rem;
 }
 .title {
   padding: 1rem;
@@ -44,4 +49,74 @@ header {
 }
 img {
   width: 50%;
+}
+/* Basic styles for the modal */
+
+.modal {
+  /* display: none;  */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 9% auto;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 25rem;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+  position: relative;
+  top: 1.5rem;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addBtn {
+  background-color: #28a745;
+  color: white;
+}
+#addBtn:hover {
+  background-color: #0ad339;
 }
