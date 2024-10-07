@@ -1,15 +1,26 @@
-const addBtn = document.querySelector(".add-btn");
-const openModal = document.querySelector(".modal");
+const openModal = document.querySelector(".add-btn");
+const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".close");
+const addContactBtn = document.querySelector("#addBtn");
+const header = document.querySelector("header");
 
 // opening the modal
-addBtn.addEventListener("click", () => {
+openModal.addEventListener("click", () => {
   console.log("open");
-  openModal.style.display = "block";
+  modal.style.display = "block";
 });
 
 // closing the modal
 closeModal.addEventListener("click", () => {
   console.log("closed");
-  openModal.style.display = "none";
+  modal.style.display = "none";
+});
+
+addContactBtn.addEventListener("click", () => {
+  console.log("added contact");
+  modal.style.display = "none";
+  const markUp = `<div class="new-element">
+    <h1>Contact added</h1>                
+  </div>`;
+  header.insertAdjacentHTML("afterend", markUp);
 });
