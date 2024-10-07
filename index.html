@@ -10,12 +10,12 @@
   <body>
     <header>
       <h3 class="title">Contact's App 📑</h3>
-      <button class="add-btn">+ </button>
+      <button class="add-btn">+</button>
     </header>
     <div id="modal" class="modal">
       <div class="modal-content">
         <span id="closeModalBtn" class="close">❌</span>
-        
+
         <h2>Enter Details</h2>
 
         <form>
@@ -34,11 +34,12 @@
           <label for="email">Email ID:</label>
           <input type="email" id="email" name="email" required /><br />
 
-          <input type="radio" id="office" name="type" value="office" required />
-          <label for="office">Office</label>
-
-          <input type="radio" id="family" name="type" value="family" />
-          <label for="family">Family</label><br />
+          <label for="type">Select Type:</label>
+          <select id="type" name="type" required>
+            <option value="office">Office</option>
+            <option value="family">Family</option>
+          </select>
+          <br />
 
           <button type="submit" id="addBtn">Add Contact</button>
         </form>

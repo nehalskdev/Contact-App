@@ -66,7 +66,6 @@ h3 {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-
 .modal-content {
   background-color: #fff;
   margin: 12% auto;
@@ -106,12 +105,22 @@ input[type="tel"] {
   border-radius: 5px;
   width: 100%;
 }
+select {
+  width: 9rem;
+  max-width: 100%;
+  margin: 0.3rem 0 0 0.2rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
 
-input[type="radio"] {
-  margin-right: 5px;
-  position: relative;
-  top: 1.6rem;
-  right: 3rem;
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 button {
