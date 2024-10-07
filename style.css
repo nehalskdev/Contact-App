@@ -5,32 +5,12 @@
 }
 body {
   height: 100vh;
-  background: radial-gradient(
-        circle,
-        transparent 10%,
-        #ccedf7 20%,
-        #ccedf7 80%,
-        transparent 80%,
-        transparent
-      )
-      0% 0% / 20px 20px,
-    radial-gradient(
-        circle,
-        transparent 10%,
-        #ccedf7 20%,
-        #ccedf7 80%,
-        transparent 80%,
-        transparent
-      )
-      10px 10px / 20px 20px,
-    linear-gradient(#b1b1ff 2px, transparent 2px) 0px -1px / 10px 10px,
-    linear-gradient(90deg, #b1b1ff 2px, #ccedf7 2px) -1px 0px / 10px 10px #ccedf7;
-  background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
-  background-color: #ccedf7;
+  background-color: #ebeff0;
+  font-family: sans-serif;
 }
 header {
   height: 4rem;
-  background-color: aqua;
+  background-color: rgb(137, 137, 239);
   display: flex;
   align-items: center;
 }
@@ -88,12 +68,13 @@ form {
   flex-direction: column;
 }
 h2 {
-  padding: 0 0.8rem 0 0;
+  padding: 0 0.7rem 0 0;
+  margin: 0 0 0.7rem 0;
   text-align: center;
 }
 
 label {
-  margin-top: 10px;
+  margin-top: 0.3rem;
 }
 
 input[type="text"],
@@ -129,6 +110,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: inherit;
 }
 
 #addBtn {
