@@ -18,30 +18,45 @@
 
         <h2>Enter Details</h2>
 
-        <form>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required /><br />
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required /><br />
+        <label for="mobile">Mobile Number:</label>
+        <input
+          type="tel"
+          id="mobile"
+          name="mobile"
+          pattern="[0-9]{10}"
+          required
+        /><br />
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" required /><br />
 
-          <label for="mobile">Mobile Number:</label>
-          <input
-            type="tel"
-            id="mobile"
-            name="mobile"
-            pattern="[0-9]{10}"
-            required
-          /><br />
+        <div class="radio-group">
+          <label for="office">
+            <input
+              type="radio"
+              id="radio"
+              name="type"
+              value="office"
+              required
+            />
+            Office
+          </label>
 
-          <label for="email">Email ID:</label>
-          <input type="email" id="email" name="email" required /><br />
+          <label for="family">
+            <input
+              type="radio"
+              id="radio"
+              name="type"
+              value="family"
+              required
+            />
+            Family
+          </label>
+        </div>
 
-          <label for="type">Select Type:</label>
-          <select id="type" name="type" required>
-            <option value="office">Office</option>
-            <option value="family">Family</option>
-          </select>
-          <br />
-          <button type="submit" id="addBtn">Add Contact</button>
-        </form>
+        <br />
+        <button type="button" id="addBtn">Add Contact</button>
       </div>
     </div>
   </body>
