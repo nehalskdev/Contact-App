@@ -175,8 +175,7 @@ button {
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
-
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .contact-element__info {
     max-width: 100%;
   }
@@ -184,4 +183,4 @@ button {
   .iconbox p {
     font-size: 0.9rem;
   }
-} */
+}
