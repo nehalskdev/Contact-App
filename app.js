@@ -4,7 +4,7 @@ const closeModal = document.querySelector(".close");
 const addContactBtn = document.querySelector("#addBtn");
 const header = document.querySelector("header");
 const inputs = [...document.querySelectorAll("input")];
-console.log(inputs);
+const container = document.querySelector(".container");
 
 // opening the modal
 openModal.addEventListener("click", () => {
@@ -44,5 +44,5 @@ addContactBtn.addEventListener("click", (e) => {
      <div  class="btn--delete">🗑️</div>
      </div>
      </div>`;
-  header.insertAdjacentHTML("afterend", markUp);
+  container.insertAdjacentHTML('afterend', markUp)
 });
