@@ -3,8 +3,10 @@ const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".close");
 const addContactBtn = document.querySelector("#addBtn");
 const header = document.querySelector("header");
+const inputs = document.querySelectorAll("input");
+console.log([...inputs]);
 
-let addContactData = [];
+
 // opening the modal
 openModal.addEventListener("click", () => {
   console.log("open");
