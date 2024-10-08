@@ -4,6 +4,7 @@ const closeModal = document.querySelector(".close");
 const addContactBtn = document.querySelector("#addBtn");
 const header = document.querySelector("header");
 
+let addContactData = [];
 // opening the modal
 openModal.addEventListener("click", () => {
   console.log("open");
@@ -34,9 +35,10 @@ addContactBtn.addEventListener("click", () => {
    Family</bold></p>
      </div>
      <div class="edit-box">
-     <div  class="btn--edit">📂</div>
+     <div  class="btn--edit">✏️</div>
      <div  class="btn--delete">🗑️</div>
      </div>
      </div>`;
+  addContactData.push({})
   header.insertAdjacentHTML("afterend", markUp);
 });
