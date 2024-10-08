@@ -3,9 +3,8 @@ const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".close");
 const addContactBtn = document.querySelector("#addBtn");
 const header = document.querySelector("header");
-const inputs = document.querySelectorAll("input");
-console.log([...inputs]);
-
+const inputs = [...document.querySelectorAll("input")];
+console.log(inputs);
 
 // opening the modal
 openModal.addEventListener("click", () => {
@@ -19,28 +18,31 @@ closeModal.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-addContactBtn.addEventListener("click", () => {
+addContactBtn.addEventListener("click", (e) => {
   console.log("added contact");
   modal.style.display = "none";
+  const userData = {};
+  inputs.forEach((input) => {
+    userData[input.id] = input.value;
+  });
   const markUp = `<div class="contact-element__image">
      </div>
      <div class="contact-element__info">
-     <h2>Nehal Shaikh</h2>
+     <h2>${userData.name}</h2>
      <div class="iconbox">
-     <p> nikesk@gmail.com</p> 
+     <p> ${userData.email}</p> 
      </div>
      <div class="iconbox">
-     <p>9137882648</p>
+     <p>${userData.mobile}</p>
      </div>
      <div class="iconbox">
       <p>
-   Family</bold></p>
+   ${userData.radio}</bold></p>
      </div>
      <div class="edit-box">
      <div  class="btn--edit">✏️</div>
      <div  class="btn--delete">🗑️</div>
      </div>
      </div>`;
-  addContactData.push({})
   header.insertAdjacentHTML("afterend", markUp);
 });
