@@ -116,3 +116,71 @@ button {
 #addBtn:hover {
   background-color: #0ad339;
 }
+/* style for new created info box
+
+.contact-element__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  max-width: 20rem;
+  margin: 1rem;
+}
+
+/* Name heading styling */
+.contact-element__info h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Iconbox styling */
+.iconbox p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Status styling */
+.bold {
+  font-weight: bold;
+}
+
+/* Edit and delete button styling */
+.edit-box {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.btn--edit, .btn--delete {
+  cursor: pointer;
+}
+
+.btn--edit img, .btn--delete img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hover effects */
+.btn--edit:hover, .btn--delete:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+/* @media (max-width: 768px) {
+  .contact-element__info {
+    max-width: 100%;
+  }
+  
+  .iconbox p {
+    font-size: 0.9rem;
+  }
+} */
