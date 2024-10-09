@@ -6,6 +6,12 @@ const header = document.querySelector("header");
 const inputs = [...document.querySelectorAll("input")];
 const container = document.querySelector(".container");
 
+const resetModalInputs = function () {
+   document.getElementById("name").value = "";
+   document.getElementById("email").value = "";
+   document.getElementById("mobile").value = "";
+   document.getElementById("radio").value = "";
+}
 // opening the modal
 openModal.addEventListener("click", () => {
   console.log("open");
@@ -25,7 +31,7 @@ addContactBtn.addEventListener("click", (e) => {
   inputs.forEach((input) => {
     userData[input.id] = input.value;
   });
-  const markUp = `<div class="contact-element__image">
+  const contactCard = `<div class="contact-element__image">
      </div>
      <div class="contact-element__info">
      <h2>${userData.name}</h2>
@@ -44,5 +50,6 @@ addContactBtn.addEventListener("click", (e) => {
      <div  class="btn--delete">🗑️</div>
      </div>
      </div>`;
-  container.insertAdjacentHTML('afterend', markUp)
+  container.insertAdjacentHTML("afterend", contactCard);
+  resetModalInputs();
 });
