@@ -31,8 +31,7 @@ addContactBtn.addEventListener("click", (e) => {
   inputs.forEach((input) => {
     userData[input.id] = input.value;
   });
-  const contactCard = `<div class="contact-element__image">
-     </div>
+  const contactCard =`
      <div class="contact-element__info">
      <h2>${userData.name}</h2>
      <div class="iconbox">
@@ -50,6 +49,6 @@ addContactBtn.addEventListener("click", (e) => {
      <div  class="btn--delete">🗑️</div>
      </div>
      </div>`;
-  container.insertAdjacentHTML("afterend", contactCard);
+  container.insertAdjacentHTML("afterbegin",contactCard);
   resetModalInputs();
 });
