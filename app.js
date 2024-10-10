@@ -7,8 +7,6 @@ const inputs = [...document.querySelectorAll("input")];
 const container = document.querySelector(".container");
 const btnEdit = document.getElementsByClassName("btn--edit");
 
-const randomNumber = Math.round(Math.random() * 100000);
-console.log(randomNumber);
 
 const resetModalInputs = function (input) {
   inputs.forEach((input) => {
@@ -30,6 +28,10 @@ closeModal.addEventListener("click", () => {
 addContactBtn.addEventListener("click", (e) => {
   console.log("added contact");
   modal.style.display = "none";
+
+  const randomNumber = Math.round(Math.random() * 100000);
+  console.log(randomNumber);
+
   const userData = {
     id: randomNumber,
   };
@@ -37,6 +39,7 @@ addContactBtn.addEventListener("click", (e) => {
   inputs.forEach((input) => {
     userData[input.id] = input.value;
   });
+  
   const contactCard = `
      <div class="contact-element__info">
      <h2>${userData.name}</h2>
@@ -59,6 +62,7 @@ addContactBtn.addEventListener("click", (e) => {
   resetModalInputs();
 });
 
-// btnEdit.addEventListener("click", () => {
-//   console.log("edit");
-// });
+
+btnEdit.addEventListener("click", () => {
+  console.log("edit");
+});
