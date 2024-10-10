@@ -9,6 +9,7 @@ const container = document.querySelector(".container");
 const resetModalInputs = function (input) {
   inputs.forEach((input) => {
     input.value = "";
+    if (input.type === "radio") input.checked = false;
   });
 };
 // const editModalInputs = function (inputs) {
@@ -40,8 +41,14 @@ addContactBtn.addEventListener("click", (e) => {
     id: randomNumber,
   };
   console.log(userData);
+
+
   inputs.forEach((input) => {
-    userData[input.id] = input.value;
+    if (input.type === "radio" && input.checked) {
+      userData[input.name] = input.value; 
+    } else if (input.type !== "radio") {
+      userData[input.id] = input.value; 
+    }
   });
 
   const contactCard = `
@@ -55,7 +62,7 @@ addContactBtn.addEventListener("click", (e) => {
      </div>
      <div class="iconbox">
       <p>
-   ${userData.radio}</bold></p>
+   ${userData.type}</bold></p>
      </div>
      <div class="edit-box">
      <div  class="btn--edit">✏️</div>
