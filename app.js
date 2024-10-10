@@ -5,14 +5,18 @@ const addContactBtn = document.querySelector("#addBtn");
 const header = document.querySelector("header");
 const inputs = [...document.querySelectorAll("input")];
 const container = document.querySelector(".container");
-const btnEdit = document.getElementsByClassName("btn--edit");
-
 
 const resetModalInputs = function (input) {
   inputs.forEach((input) => {
     input.value = "";
   });
 };
+// const editModalInputs = function (inputs) {
+//   inputs.forEach((input) => {
+//     input.value = "Hi";
+//   });
+// };
+
 // opening the modal
 openModal.addEventListener("click", () => {
   console.log("open");
@@ -39,7 +43,7 @@ addContactBtn.addEventListener("click", (e) => {
   inputs.forEach((input) => {
     userData[input.id] = input.value;
   });
-  
+
   const contactCard = `
      <div class="contact-element__info">
      <h2>${userData.name}</h2>
@@ -58,11 +62,12 @@ addContactBtn.addEventListener("click", (e) => {
      <div  class="btn--delete">🗑️</div>
      </div>
      </div>`;
+
   container.insertAdjacentHTML("afterbegin", contactCard);
+
   resetModalInputs();
-});
-
-
-btnEdit.addEventListener("click", () => {
-  console.log("edit");
+  const btnEdit = document.querySelector(".btn--edit");
+  btnEdit.addEventListener("click", () => {
+    modal.style.display = "block";
+  });
 });
