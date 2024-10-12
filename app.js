@@ -6,10 +6,12 @@ const header = document.querySelector("header");
 const inputs = [...document.querySelectorAll("input")];
 const container = document.querySelector(".container");
 
-const resetModalInputs = function (input) {
+console.log(inputs);
+const resetModalInputs = function () {
   inputs.forEach((input) => {
-    input.value = "";
-    if (input.type === "radio") input.checked = false;
+    if (input.type === "radio") {
+      input.checked = false;
+    } else {input.value = ""};
   });
 };
 // const editModalInputs = function (inputs) {
@@ -42,12 +44,11 @@ addContactBtn.addEventListener("click", (e) => {
   };
   console.log(userData);
 
-
   inputs.forEach((input) => {
     if (input.type === "radio" && input.checked) {
-      userData[input.name] = input.value; 
+      userData[input.name] = input.value;
     } else if (input.type !== "radio") {
-      userData[input.id] = input.value; 
+      userData[input.id] = input.value;
     }
   });
 
